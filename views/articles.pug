@@ -1,0 +1,20 @@
+html
+  head
+    title= title
+  body
+    h1= title
+    div
+      a(href= navigation[0]) Home
+      |
+      |
+    div
+      a(href= navigation[1]) Authors
+    ul
+      each val in data
+        li
+          h3= val.title
+          em= 'Authors: '
+          each author in val.author
+            = author.name + ', '
+          p= 'Published: ' + val.published + ', Updated: ' + val.updated
+          p= val.summary

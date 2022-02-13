@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+  body
+    h1= title
+    div
+      a(href= navigation[0]) Home
+      |
+      |
+    div
+      a(href= navigation[1]) Articles
+    ul
+      each val in data
+        li
+          h3= val.name + ' (' + val.numberOfArticles + ' articles)'
+          em= 'Most recent publication: ' + val.mostRecent
